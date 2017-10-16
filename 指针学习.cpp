@@ -1,3 +1,11 @@
+/*
+总结提纲，就是指
+1. 针要用就得先定义，int *p 之类的，p是一个地址，可以++ -- + - 操作，但是不能赋值给普普通通的0xffeedd之类，编译可以通过，但执行的时候会出错。
+2. & 是取地址操作，基本上普通的变量都需要这个取地址操作，实际上指针变量可以通过他再去一次地址，多级间接寻址的问题
+3. *p 就是间接访问地址的内容，其于普通变量一样，可以说*p=var=100
+4. 嗯！就这样，有什么问题后续再补
+
+*/
 #include <iostream>
 using namespace std;
 const int MAX = 3;
@@ -8,12 +16,17 @@ int main(){
 	
 	var = 3000;//对一个普通的变量赋值 
 	ptr = &var;//理论上来说ptr可以赋值如0xffeeccdd之类的，但是由于地址指向不明（就算是明确的地址）计算机依然会报错，所以只能通过&取地址操作来赋值 
-	pptr = &ptr;//对ptr这个指针变量再进行一次取地址操作 	 
+	pptr = &ptr;//对ptr这个指针变量再进行一次取地址操作 
+	
 	
 	cout<< "Adress of var"<<&var<<"另外一种访问方式"<<ptr<<endl;
 	cout<<" Value  of var"<<var<<"另外一种访问方式"<<*ptr<<endl;  
 	cout<< "Adress of ptr"<<&ptr<<"另外一种访问方式"<<pptr<<endl;
 	cout<<" Value  of ptr"<<*ptr<<"另外一种访问方式"<<**pptr<<endl;
+	
+	**pptr = 100；
+	cout<<" Value  of var"<<var<<endl;
+	//这个时候var变成了100
  	 
  	 
 	/*地址的不同操作方式 的结果 
@@ -21,6 +34,8 @@ int main(){
 	Value  of var3000另外一种访问方式3000
 	Adress of ptr0x28ff40另外一种访问方式0x28ff40
 	Value  of ptr3000另外一种访问方式3000
+	 Value  of var100
+	
 	请按任意键继续. . .
 	*/
  	
