@@ -104,5 +104,5 @@ int main(){
  	cout<<&var1<<endl;
  	
  	cout<<"Var2变量的地址：";
- 	cout<<&var2<<endl;
+ 	cout<<var2<<endl;//数组名是一个特殊变量，他本身就是一个地址。
  }
