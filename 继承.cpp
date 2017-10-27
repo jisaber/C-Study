@@ -1,6 +1,7 @@
-zhihouzaigeng/*
+/*
 类继承的形式如下，derived-class叫做派生类，base-class叫做基类，一个派生类可以来源于多个基类。
-其中的acess-specifier访问修饰符是 public、protected 或 private 其中的一个，代表派生类从基类继承的方式，public继承之后所有的成员都是public，以此类推。
+其中的acess-specifier访问修饰符是 public、protected 或 private 其中的一个，代表派生类从基类继承的方式，  
+public继承之后所有的成员都是public，以此类推。
 class derived-class: access-specifier base-class，access-specifier base-class
 
 
