@@ -14,7 +14,7 @@ tar -zxvf vscode-server.tar.gz
 mv vscode-server-linux-x64/ vscode-server
 ```
 然后再连接就可以了，这个就可以直接访问远端的地址，类似于wecode的方式,而且可以执行远端的命令,避免了samba的缺点
-![成功截图](./images/vscode-success-remote-ssh.jpg)
+![成功截图](./images/vscode-success-remote-ssh.png)
 
 ## 安装gcc和g++
 ```shell
