@@ -15,7 +15,7 @@ gccmake()
     echo "result: $outfile"
     g++ -o $outfile $filename
     echo "=================== below is bin result ==================="
-    ./$outfile
+    $outfile
 }
 
 while getopts "f:o:h" opt;do
