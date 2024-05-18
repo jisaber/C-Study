@@ -1,4 +1,3 @@
-
 date
 outdir="./output/aarch64"
 filename=""
@@ -15,7 +14,7 @@ gccmake()
     echo "source: $filename "
     echo "result: $outfile"
     g++ -o $outfile $filename
-    echo "=================== below is bin result============"
+    echo "=================== below is bin result ==================="
     ./$outfile
 }
 
