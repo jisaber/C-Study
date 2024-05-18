@@ -1,0 +1,2 @@
+# 忽略所有的输出中间件
+c++_study/build/output/
